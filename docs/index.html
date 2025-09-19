@@ -1,2 +1,198 @@
-<!doctype html>
-<h1>It works 🎉</h1>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cipher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Independent Game Developer</p>
+        <h1 class="hero__title">Cipher</h1>
+        <p class="hero__subtitle">
+          I'm a 20 year old guy that has spent too much time online. I rant about cars on my twitter, I develop simple but fun games for browsers and I lift heavy circles.
+        </p>
+        <a class="hero__cta" href="#games">Scroll to explore</a>
+      </div>
+    </header>
+
+    <main>
+
+
+      <section id="games" class="games">
+        <div class="section-heading">
+          <h2>Featured Games</h2>
+          <p>Here lie my recent projects that I built</p>
+        </div>
+        <div class="games__grid">
+          <article class="game-card" tabindex="0">
+            <div class="game-card__badge">New</div>
+            <h3>Idle Racer Blackjack</h3>
+            <p class="game-card__tagline">Idle Racer + Blackjack.</p>
+            <p class="game-card__description">
+              A slick single-file idle game. Earn gold, unlock upgrades, and dive into a fully playable Blackjack side-game.
+            </p>
+            <a
+              class="game-card__link"
+              href="https://cipheratlas.itch.io/idle-racer-blackjack"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View on itch.io</a>
+            <div class="game-card__details" hidden>
+              <p>
+                Built during a stretch of late-night tuning, Idle Racer Blackjack experiments with layering an idle progression loop over a fast tactical minigame. I kept the economy intentionally lean so every upgrade choice matters, and let the Blackjack table act as the risk/reward spike when players want to push their luck.
+              </p>
+              <p>
+                The build is completely contained in a single HTML file, which forced me to stay disciplined with scope and asset size. That constraint taught me a ton about trimming JS bloat and squeezing atmosphere out of minimal art.
+              </p>
+            </div>
+          </article>
+
+          <article class="game-card" tabindex="0">
+            <h3>Airport Ground Control</h3>
+            <p class="game-card__tagline">Assign ground crews to turn flights quickly and safely.</p>
+            <p class="game-card__description">
+              Manage limited resources, hire/upgrade teams, and decide when to let managers auto-assign.
+            </p>
+            <a
+              class="game-card__link"
+              href="https://cipheratlas.itch.io/airport-ground-control"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View on itch.io</a>
+            <div class="game-card__details" hidden>
+              <p>
+                This project started as a systems-design sandbox to figure out how to make scheduling feel satisfying. I focused on keeping the UI frictionless so players can drag-and-drop crews without second guessing the interface, then layered in clear audio cues to celebrate quick callbacks and warn about delays.
+              </p>
+              <p>
+                The balancing act here was teaching rules fast: I leaned on progressive tutorials and short scenario cards so you can get from runway to runway without reading a manual. Iterating on that flow helped me improve onboarding for every game that followed.
+              </p>
+            </div>
+          </article>
+
+          <article class="game-card" tabindex="0">
+            <h3>T-Top Skies</h3>
+            <p class="game-card__tagline">Open roof, open world.</p>
+            <p class="game-card__description">
+              A chill aerial exploration adventure with ambient score and modular upgrades inspired by 90s interiors.
+            </p>
+            <a
+              class="game-card__link"
+              href="https://itch.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View on itch.io</a>
+            <div class="game-card__details" hidden>
+              <p>
+                T-Top Skies is my love letter to low-poly panoramas and long freeway drives. I prototyped a gliding model that feels weightless but still benefits from momentum, then wrote a lightweight mission generator so new vistas and objectives keep appearing as you drift.
+              </p>
+              <p>
+                The mood piece side of the project pushed me to experiment with layered shaders and ambient sound beds. Being able to jot big-picture thoughts in this panel helps me track the evolution of the art direction while I iterate.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="card-modal" id="gameModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="card-modal__backdrop" data-close-modal></div>
+      <div class="card-modal__content">
+        <button class="card-modal__close" type="button" aria-label="Close details" data-close-modal>&times;</button>
+        <div class="card-modal__header">
+          <h3 class="card-modal__title"></h3>
+          <a class="card-modal__link" href="#" target="_blank" rel="noopener noreferrer">View on itch.io</a>
+        </div>
+        <div class="card-modal__body"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> ZX Garage. Crafted for night drives.</p>
+      <p>
+        <a href="https://x.com/ariescipher7" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <span aria-hidden="true">&middot;</span>
+        <a href="https://cipheratlas.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a>
+      </p>
+    </footer>
+
+    <script>
+      const currentYear = new Date().getFullYear();
+      document.getElementById('year').textContent = currentYear;
+
+      const cards = document.querySelectorAll('.game-card');
+      const modal = document.getElementById('gameModal');
+      const modalTitle = modal.querySelector('.card-modal__title');
+      const modalLink = modal.querySelector('.card-modal__link');
+      const modalBody = modal.querySelector('.card-modal__body');
+      const closeTriggers = modal.querySelectorAll('[data-close-modal]');
+      const closeButton = modal.querySelector('.card-modal__close');
+      let lastFocusedCard = null;
+
+      const openModal = (card) => {
+        lastFocusedCard = card;
+        const title = card.querySelector('h3').textContent.trim();
+        const link = card.querySelector('.game-card__link');
+        const details = card.querySelector('.game-card__details');
+
+        modalTitle.textContent = title;
+        if (link) {
+          modalLink.href = link.href;
+        }
+        modalBody.innerHTML = details ? details.innerHTML : '';
+        modalBody.scrollTop = 0;
+
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        closeButton.focus();
+      };
+
+      const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        if (lastFocusedCard) {
+          lastFocusedCard.focus();
+          lastFocusedCard = null;
+        }
+      };
+
+      cards.forEach((card) => {
+        card.addEventListener('click', (event) => {
+          if (event.target.closest('.game-card__link')) {
+            return;
+          }
+          event.preventDefault();
+          openModal(card);
+        });
+
+        card.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openModal(card);
+          }
+        });
+      });
+
+      closeTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', closeModal);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>
+
