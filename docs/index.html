@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cipher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Independent Game Developer</p>
+        <h1 class="hero__title">Cipher</h1>
+        <p class="hero__subtitle">
+          I'm a 20 year old guy that has spent too much time online. I rant about cars on my twitter, I develop simple but fun games for browsers and I lift heavy circles.
+        </p>
+        <a class="hero__cta" href="#about">Scroll to explore</a>
+      </div>
+    </header>
+
+    <main>
+      <nav class="nav">
+        <div class="nav__container">
+          <a href="#about" class="nav__link">About</a>
+          <a href="#games" class="nav__link">Games</a>
+          <a href="#learning" class="nav__link">Learning</a>
+        </div>
+      </nav>
+
+      <section id="about" class="about">
+        <div class="section-heading">
+          <h2>About Me</h2>
+          <p>Get to know the person behind the games</p>
+        </div>
+        <div class="about__panel">
+          <h3>Who I Am</h3>
+          <p>
+            I'm a 20-year-old independent game developer who's passionate about creating simple but engaging experiences. When I'm not coding, you'll find me ranting about cars on Twitter, hitting the gym to lift heavy circles, or diving deep into the latest game mechanics that catch my interest.
+          </p>
+          <p>
+            My journey into game development started with a curiosity about how games work under the hood. I love the challenge of distilling complex ideas into elegant, playable experiences that anyone can pick up and enjoy.
+          </p>
+          <h3>My Approach</h3>
+          <p>
+            I believe in keeping things simple but meaningful. Every game I create is an experiment in finding the perfect balance between accessibility and depth. Whether it's an idle progression system or a tactical management puzzle, I focus on making the core loop satisfying and the learning curve gentle.
+          </p>
+        </div>
+      </section>
+
+      <section id="games" class="games">
+        <div class="section-heading">
+          <h2>Featured Games</h2>
+          <p>Here lie my recent projects that I built</p>
+        </div>
+        <div class="games__grid">
+          <article class="game-card" tabindex="0">
+            <div class="game-card__badge">Latest</div>
+            <h3>Parcel Panic</h3>
+            <p class="game-card__tagline">Draw routes, deliver packages, race against time!</p>
+            <p class="game-card__description">
+              A fast-paced delivery game where you draw custom routes for your truck to follow. Deliver packages to houses before their countdown timers expire in this cozy winter-themed 3D experience.
+            </p>
+            <a
+              class="game-card__link"
+              href="https://cipheratlas.github.io/parcel-panic/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Play on GitHub Pages</a>
+            <div class="game-card__details" hidden>
+              <p>
+                Parcel Panic represents my biggest technical leap yet - diving deep into WebGPU rendering with Three.js and building a full 3D game engine from scratch. The route drawing system uses custom shaders and procedural geometry generation, creating smooth, responsive paths that feel natural to draw.
+              </p>
+              <p>
+                This project taught me the importance of performance optimization in real-time 3D applications. Every frame counts when you're managing WebGPU resources, audio systems, and complex game state. The cozy winter jazz theme was a deliberate choice to make the high-pressure gameplay feel more relaxing and accessible.
+              </p>
+              <p>
+                The upgrade system and week progression create a satisfying difficulty curve, while the seed-based runs ensure consistent, replayable gameplay. Building the mobile-responsive UI for a 3D game was particularly challenging but rewarding.
+              </p>
+            </div>
+          </article>
+
+          <article class="game-card" tabindex="0">
+            <div class="game-card__badge">New</div>
+            <h3>Idle Racer Blackjack</h3>
+            <p class="game-card__tagline">Idle Racer + Blackjack.</p>
+            <p class="game-card__description">
+              A slick single-file idle game. Earn gold, unlock upgrades, and dive into a fully playable Blackjack side-game.
+            </p>
+            <a
+              class="game-card__link"
+              href="https://cipheratlas.itch.io/idle-racer-blackjack"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View on itch.io</a>
+            <div class="game-card__details" hidden>
+              <p>
+                Built during a stretch of late-night tuning, Idle Racer Blackjack experiments with layering an idle progression loop over a fast tactical minigame. I kept the economy intentionally lean so every upgrade choice matters, and let the Blackjack table act as the risk/reward spike when players want to push their luck.
+              </p>
+              <p>
+                The build is completely contained in a single HTML file, which forced me to stay disciplined with scope and asset size. That constraint taught me a ton about trimming JS bloat and squeezing atmosphere out of minimal art.
+              </p>
+            </div>
+          </article>
+
+          <article class="game-card" tabindex="0">
+            <h3>Airport Ground Control</h3>
+            <p class="game-card__tagline">Assign ground crews to turn flights quickly and safely.</p>
+            <p class="game-card__description">
+              Manage limited resources, hire/upgrade teams, and decide when to let managers auto-assign.
+            </p>
+            <a
+              class="game-card__link"
+              href="https://cipheratlas.itch.io/airport-ground-control"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View on itch.io</a>
+            <div class="game-card__details" hidden>
+              <p>
+                This project started as a systems-design sandbox to figure out how to make scheduling feel satisfying. I focused on keeping the UI frictionless so players can drag-and-drop crews without second guessing the interface, then layered in clear audio cues to celebrate quick callbacks and warn about delays.
+              </p>
+              <p>
+                The balancing act here was teaching rules fast: I leaned on progressive tutorials and short scenario cards so you can get from runway to runway without reading a manual. Iterating on that flow helped me improve onboarding for every game that followed.
+              </p>
+            </div>
+          </article>
+          <article class="game-card" tabindex="0">
+            <h3>Pomodoro Colony</h3>
+            <p class="game-card__tagline">Pomodoro Colony takes the classic Pomodoro technique and gives it a playful twist: every time you focus, your colony grows.</p>
+            <p class="game-card__description">
+              Set a timer for your study or work session, and while you stay on task, your digital settlement collects resources, builds new structures, and expands
+            </p>
+            <a
+              class="game-card__link"
+              href="https://cipheratlas.itch.io/pomodoro-colony"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View on itch.io</a>
+            <div class="game-card__details" hidden>
+              <p>
+                This project started as a systems-design sandbox to figure out how to make scheduling feel satisfying. I focused on keeping the UI frictionless so players can drag-and-drop crews without second guessing the interface, then layered in clear audio cues to celebrate quick callbacks and warn about delays.
+              </p>
+              <p>
+                The balancing act here was teaching rules fast: I leaned on progressive tutorials and short scenario cards so you can get from runway to runway without reading a manual. Iterating on that flow helped me improve onboarding for every game that followed.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="learning" class="learning">
+        <div class="section-heading">
+          <h2>What I've Learned</h2>
+          <p>Insights and lessons from my game development journey</p>
+        </div>
+        <div class="learning__content">
+          <div class="learning__panel">
+            <h3>Design Philosophy</h3>
+            <p>
+              Every game I build teaches me something new about player psychology. I've learned that the most satisfying mechanics often come from simple rules that create complex emergent behaviors. The key is finding that sweet spot where players feel smart without being overwhelmed.
+            </p>
+            <p>
+              I've discovered that constraints breed creativity. Working within tight technical limits (like single-file games) forces me to be more intentional with every line of code and every design decision.
+            </p>
+          </div>
+          
+          <div class="learning__panel">
+            <h3>Technical Growth</h3>
+            <p>
+              Building games has taught me the importance of clean, maintainable code. I've learned to structure projects so they can grow organically, and how to balance performance with readability. Every game is a new opportunity to refine my development process.
+            </p>
+            <p>
+              I've also learned that user experience extends far beyond the game itself. From the itch.io page to the first few seconds of gameplay, every touchpoint matters in creating a cohesive experience.
+            </p>
+          </div>
+
+          <div class="learning__panel">
+            <h3>Player Feedback</h3>
+            <p>
+              One of the most valuable lessons has been learning to listen to players while staying true to my vision. Feedback helps me understand what's working and what isn't, but I've learned to trust my instincts about the core experience I want to create.
+            </p>
+            <p>
+              I've discovered that the best feedback often comes from watching people play rather than just reading their comments. Body language and hesitation points reveal more about the experience than words ever could.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="card-modal" id="gameModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="card-modal__backdrop" data-close-modal></div>
+      <div class="card-modal__content">
+        <button class="card-modal__close" type="button" aria-label="Close details" data-close-modal>&times;</button>
+        <div class="card-modal__header">
+          <h3 class="card-modal__title"></h3>
+          <a class="card-modal__link" href="#" target="_blank" rel="noopener noreferrer">View on itch.io</a>
+        </div>
+        <div class="card-modal__body"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        <a href="https://x.com/ariescipher7" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <span aria-hidden="true">&middot;</span>
+        <a href="https://cipheratlas.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a>
+      </p>
+    </footer>
+
+    <script>
+      const currentYear = new Date().getFullYear();
+      document.getElementById('year').textContent = currentYear;
+
+      const cards = document.querySelectorAll('.game-card');
+      const modal = document.getElementById('gameModal');
+      const modalTitle = modal.querySelector('.card-modal__title');
+      const modalLink = modal.querySelector('.card-modal__link');
+      const modalBody = modal.querySelector('.card-modal__body');
+      const closeTriggers = modal.querySelectorAll('[data-close-modal]');
+      const closeButton = modal.querySelector('.card-modal__close');
+      let lastFocusedCard = null;
+
+      const openModal = (card) => {
+        lastFocusedCard = card;
+        const title = card.querySelector('h3').textContent.trim();
+        const link = card.querySelector('.game-card__link');
+        const details = card.querySelector('.game-card__details');
+
+        modalTitle.textContent = title;
+        if (link) {
+          modalLink.href = link.href;
+        }
+        modalBody.innerHTML = details ? details.innerHTML : '';
+        modalBody.scrollTop = 0;
+
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        closeButton.focus();
+      };
+
+      const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        if (lastFocusedCard) {
+          lastFocusedCard.focus();
+          lastFocusedCard = null;
+        }
+      };
+
+      cards.forEach((card) => {
+        card.addEventListener('click', (event) => {
+          if (event.target.closest('.game-card__link')) {
+            return;
+          }
+          event.preventDefault();
+          openModal(card);
+        });
+
+        card.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openModal(card);
+          }
+        });
+      });
+
+      closeTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', closeModal);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>
+
